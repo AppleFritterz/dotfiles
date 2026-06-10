@@ -1,0 +1,22 @@
+[user]
+	email = mfritz70@gmail.com
+    name = Fritz
+[pager]
+	branch = false
+[push]
+	autoSetupRemote = true
+[core]
+    editor = vim
+    pager = delta
+[init]
+    defaultBranch = main
+[delta]
+    navigate = true
+    line-numbers = true
+    side-by-side = true
+[interactive]
+    diffFilter = delta --color-only
+[alias]
+    lg = log --oneline --graph --decorate --all
+    undo = reset HEAD~1 --mixed
+    staged = diff --cached
