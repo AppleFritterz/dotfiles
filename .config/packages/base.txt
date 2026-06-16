@@ -1,0 +1,49 @@
+# base.txt
+# Minimal universal skeleton — goes on every machine
+
+# Core system
+base
+base-devel
+linux
+linux-firmware
+
+# Filesystem / boot
+btrfs-progs
+dosfstools
+efibootmgr
+
+# Networking
+networkmanager
+wireless_tools
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+wireplumber
+gst-plugin-pipewire
+libpulse
+pavucontrol
+
+# CLI utilities
+git
+neovim
+kitty
+htop
+tree
+jq
+wget
+zip
+man-db
+
+# Fonts / desktop integration
+ttf-ms-fonts
+ttf-fira-code
+noto-fonts-cjk
+xdg-utils
+
+# Security / maintenance
+ufw
+smartmontools
+pacman-contrib
