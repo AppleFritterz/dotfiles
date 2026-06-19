@@ -1,9 +1,24 @@
+---------------------
+---- MY PROGRAMS ----
+---------------------
+
+-- Global variables to reference default utilities
+-- Defined first so required files can access them
+terminal    = "kitty"
+fileManager = "dolphin"
+menu        = "hyprlauncher"
+browser     = "firefox"
+wallpaper   = "hyprpaper"
+notifyd     = "mako"
+statusbar   = "ironbar"
+
 ------------------
 -----REQUIRES-----
 ------------------
 
 require("autostart")
 require("keybinds")
+
 
 ------------------
 ---- MONITORS ----
@@ -18,20 +33,6 @@ hl.monitor({
 })
 
 
----------------------
----- MY PROGRAMS ----
----------------------
-
--- Variables to reference default utilities
-local config = {
-    terminal    = "kitty",
-    fileManager = "dolphin",
-    menu        = "hyprlauncher",
-    browser     = "firefox",
-    wallpaper   = "hyprpaper",
-    notifyd     = "mako",
-    statusbar   = "ironbar"
-    }
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
@@ -235,8 +236,6 @@ hl.device({
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
-
--- Example window rules that are useful
 
 local suppressMaximizeRule = hl.window_rule({
     -- Ignore maximize requests from all apps. You'll probably like this.
