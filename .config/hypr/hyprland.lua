@@ -4,20 +4,21 @@
 
 -- Global variables to reference default utilities
 -- Defined first so required files can access them
-terminal    = "kitty"
-fileManager = "dolphin"
-menu        = "hyprlauncher"
-browser     = "firefox"
-wallpaper   = "hyprpaper"
-notifyd     = "mako"
-statusbar   = "ironbar"
-
+local settings = {
+    terminal    = "kitty",
+    fileManager = "dolphin",
+    menu        = "hyprlauncher",
+    browser     = "firefox",
+    wallpaper   = "hyprpaper",
+    notifyd     = "mako",
+    statusbar   = "ironbar"
+}
 ------------------
 -----REQUIRES-----
 ------------------
 
-require("autostart")
-require("keybinds")
+require("autostart")(settings)
+require("keybinds")(settings)
 
 
 ------------------
