@@ -1,0 +1,21 @@
+icon_theme: "Papirus"
+position: bottom
+height: 30
+
+start:
+  - type: "menu"
+    label_icon: "distributor-logo-archlinux" 
+    label: null
+
+  - type: "workspaces"
+    favorites:
+      - "1"
+      - "2"
+      - "3"
+
+center: []
+
+end:
+  - type: "clock"
+    format: "%d/%m/%Y %H:%M"
+

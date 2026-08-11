@@ -3,6 +3,8 @@ call plug#begin()
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 
+let g:indentLine_fileTypeExclude = ['dockerfile']
+
 " Consider coc for autocomplete
 " Consider fugitive for git integration
 call plug#end()
