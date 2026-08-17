@@ -1,21 +1,30 @@
 icon_theme: "Papirus"
 position: bottom
-height: 30
+height: 40
+popup_autohide: true
 
 start:
   - type: "menu"
     label_icon: "distributor-logo-archlinux" 
+    label_icon_size: 32
     label: null
 
-  - type: "workspaces"
+  - type: "launcher"
     favorites:
-      - "1"
-      - "2"
-      - "3"
+      - "firefox"
+      - "kitty"
+      - "steam"
+  - type: "workspaces"
 
 center: []
 
 end:
+  - type: "battery"
+    show_label: false
+    justify: "center"
+
+
   - type: "clock"
-    format: "%d/%m/%Y %H:%M"
+    justify: "center"
+    format: "%I:%M%P\n%d/%m/%y"
 
