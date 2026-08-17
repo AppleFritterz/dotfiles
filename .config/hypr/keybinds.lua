@@ -11,7 +11,7 @@ return function(settings)
     hl.bind(mainMod .. " + M", hl.dsp.exit())
     hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(settings.fileManager))
     hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-    hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(settings.menu))
+    hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(settings.menu .. " --toggle"))
     hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
     hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
