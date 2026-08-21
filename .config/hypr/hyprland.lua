@@ -19,6 +19,7 @@ local settings = {
 
 require("autostart")(settings)
 require("keybinds")(settings)
+require("gaming")(settings)
 
 
 ------------------
