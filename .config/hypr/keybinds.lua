@@ -10,7 +10,11 @@ return function(settings)
     -- closeWindowBind:set_enabled(false)
     hl.bind(mainMod .. " + M", hl.dsp.exit())
     hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(settings.fileManager))
-    hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+    -- Brings current window front & center 
+    hl.bind(mainMod .. " + V", function()
+        hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+        hl.dispatch(hl.dsp.window.center())
+    end)
     hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(settings.menu .. " --toggle"))
     hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
     hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
@@ -28,10 +32,6 @@ return function(settings)
         hl.bind(mainMod .. " + " .. key,         hl.dsp.focus({ workspace = i }))
         hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
     end
-
-    -- Example special workspace (scratchpad)
-    hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))
-    hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
     -- Scroll through existing workspaces with mainMod + scroll
     hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
