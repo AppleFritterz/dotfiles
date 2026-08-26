@@ -19,6 +19,9 @@ start:
 center: []
 
 end:
+  - type: "volume"
+    format: "{icon} {percentage}%"
+
   - type: "battery"
     show_label: false
     justify: "center"
