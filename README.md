@@ -39,4 +39,10 @@ The alias is in `.bashrc` — sourcing it makes it permanent without opening a n
 
 ## Dependencies
 
-- `delta` — required for gitconfig diff pager (`pacman -S git-delta`)
+- `delta` - required for gitconfig diff pager (`pacman -S git-delta`)
+- `vim-plug` - required for vim plugins to load.
+  ```bash
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  ```
+    then open vim and run `:PlugInstall`
