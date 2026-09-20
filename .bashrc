@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# cosmetics
+# Cosmetics
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
@@ -23,7 +23,7 @@ alias free='free -h'
 shopt -s checkwinsize # fix window size after resize
 shopt -s cdspell # cd tries to fix directory typos
 
-# dotfiles git alias
+# Dotfiles git alias
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Generated for envman. Do not edit.
@@ -34,7 +34,6 @@ bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 
 # custom commands
-
 extract() {
     case "$1" in
         *.tar.gz)  tar xzf "$1"  ;;
@@ -48,4 +47,6 @@ extract() {
 
 note() { echo "$(date): $*" >> ~/notes.txt; }
 
+# Paths
+export PATH="$HOME/bin:$PATH"
 
