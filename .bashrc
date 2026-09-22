@@ -48,5 +48,5 @@ extract() {
 note() { echo "$(date): $*" >> ~/notes.txt; }
 
 # Paths
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
 
