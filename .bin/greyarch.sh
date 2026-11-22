@@ -4,6 +4,10 @@ qemu-system-x86_64 \
   -vga virtio \
   -display gtk,show-menubar=off \
   -cpu host \
-  -drive file=~/VMs/greyarch,format=qcow2 \
+  -drive file=$HOME/VMs/greyarch,format=qcow2 \
+  -drive file=$HOME/VMs/Samples/samples.iso,format=raw \
+  -drive if=none,id=exfil,file=$HOME/VMs/exfil.img,format=raw,readonly=on \
+  -device qemu-xhci,id=xhci \
+  -device usb-storage,bus=xhci.0,drive=exfil \
   -netdev user,id=net0,hostfwd=tcp:127.0.0.1:2222-:22 \
   -device virtio-net-pci,netdev=net0
